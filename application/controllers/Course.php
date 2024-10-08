@@ -3,11 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Course extends CI_Controller
 {
-    public function index(){
+    public function index()
+    {
         $data['title'] = 'All Courses';
         $data['user'] = $this->db->get_where('user', ['name' => $this->session->userdata('name')])->row_array();
 
-
+        $this->load->model('Courses_model', 'courses');
+        $data['courses'] = $this->courses->getCourses();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
