@@ -10633,7 +10633,7 @@ a:focus {
 
 .topbar .topbar-divider {
 	width: 0;
-	border-right: 1px solid #e3e6f0;
+	border-right: 1px solid #fff;
 	height: calc(4.375rem - 2rem);
 	margin: auto 1rem;
 }
@@ -10948,6 +10948,9 @@ a:focus {
 @media (min-width: 768px) {
 	.sidebar {
 		width: 14rem !important;
+	}
+	.sidebar-module {
+		width: 27rem !important;
 	}
 	.sidebar .nav-item .collapse {
 		position: relative;
@@ -11741,4 +11744,17 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
 	width: 100%;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: #000 !important;
+}
+
+.list-group .active {
+	background-color: #2b2d30 !important;
+	border-color: rgba(0, 0, 0, 0.125) !important;
+}
+
+.list-group .list-group-item {
+	background-color: #111111;
 }
